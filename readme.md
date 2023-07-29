@@ -16,4 +16,9 @@ LV_BRANCH='release-1.3/neovim-0.9' bash <(curl -s https://raw.githubusercontent.
 
 bash ~/.local/share/lunarvim/lvim/utils/installer/uninstall.sh
 
+# Tmux config
+
+is_vim="ps -o state= -o comm= -t '#{pane_tty}' \
+    | grep -iqE '^[^TXZ ]+ +(\\S+\\/)?g?(view|[ln]?vim?x?)(diff)?$'"
+
 

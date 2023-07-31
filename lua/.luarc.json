@@ -1,0 +1,8 @@
+{
+    "diagnostics.globals": [
+        "vim",
+        "lvim",
+        "reload",
+        "attach_to_debug"
+    ]
+}

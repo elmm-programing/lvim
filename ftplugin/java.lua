@@ -107,10 +107,7 @@ local config = {
 
 config["on_attach"] = function(client, bufnr)
   local _, _ = pcall(vim.lsp.codelens.refresh)
-    -- require("jdtls.dap").setup_dap_main_class_configs()
-  require('jdtls.setup').add_commands()
 	require("jdtls").setup_dap({ hotcodereplace = "auto" })
-  require("jdtls.dap").setup_dap_main_class_configs()
 	require("lvim.lsp").on_attach(client, bufnr)
   local status_ok, jdtls_dap = pcall(require, "jdtls.dap")
   if status_ok then
@@ -136,23 +133,6 @@ local status_ok, which_key = pcall(require, "which-key")
 if not status_ok then
   return
 end
-function attach_to_debug()
-  local hostName = vim.fn.input("HostName: ", "")
-  local port = vim.fn.input("Port: ", "")
-  local dap = require('dap')
-  dap.configurations.java = {
-    {
-      type = 'java';
-      request = 'attach';
-      name = "Attach to the process";
-      hostName = hostName;
-      port = port;
-    },
-  }
-  dap.continue()
-end
-
-
 
 local opts = {
   mode = "n", -- NORMAL mode
@@ -180,9 +160,7 @@ local mappings = {
     c = { "<Cmd>lua require('jdtls').extract_constant()<CR>", "Extract Constant" },
     t = { "<Cmd>lua require'jdtls'.test_nearest_method()<CR>", "Test Method" },
     T = { "<Cmd>lua require'jdtls'.test_class()<CR>", "Test Class" },
-    T = { "<Cmd>lua require'jdtls'.de<CR>", "Test Class" },
     u = { "<Cmd>JdtUpdateConfig<CR>", "Update Config" },
-    d = { "<Cmd>lua attach_to_debug()<CR>", "Attach debug" },
   },
 }
 

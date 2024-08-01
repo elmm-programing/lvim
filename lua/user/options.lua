@@ -19,6 +19,7 @@ lvim.builtin.nvimtree.setup.view.side = "left"
 lvim.builtin.nvimtree.setup.renderer.icons.show.git = false
 lvim.builtin.breadcrumbs.active = true
 lvim.builtin.dap.active = true
+lvim.builtin.nvimtree.setup.actions.open_file.quit_on_open=true
 lvim.keys.term_mode = { ["<C-l>"] = false }
 
 

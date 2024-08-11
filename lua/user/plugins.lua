@@ -1,6 +1,7 @@
 -- Additional Plugins
 lvim.plugins = {
   "catppuccin/nvim",
+  "hashivim/vim-terraform",
   {
     "mawkler/modicator.nvim",
     event = "ColorScheme",

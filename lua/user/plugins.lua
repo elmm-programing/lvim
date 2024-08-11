@@ -5,7 +5,18 @@ lvim.plugins = {
     "mawkler/modicator.nvim",
     event = "ColorScheme",
   },
-  "HiPhish/nvim-ts-rainbow2",
+  {
+    "zbirenbaum/copilot.lua",
+    cmd = "Copilot",
+    event = "InsertEnter",
+  },
+  {
+  "zbirenbaum/copilot-cmp",
+  config = function ()
+    require("copilot_cmp").setup()
+  end
+  }
+  , "HiPhish/nvim-ts-rainbow2",
   -- {
   --   dir = "/Users/chris/Repos/bookmark.nvim",
   -- },
@@ -92,19 +103,13 @@ lvim.plugins = {
     "0x100101/lab.nvim",
     build = "cd js && npm ci",
   },
+  "github/copilot.vim",
   {
     "zbirenbaum/copilot.lua",
     cmd = "Copilot",
     event = "InsertEnter",
   },
-  {
-    "zbirenbaum/copilot-cmp",
-    after = { "copilot.lua" },
-    config = function()
-      require("copilot_cmp").setup()
-    end,
-  },
-  -- {
+    -- {
   --   "tzachar/cmp-tabnine",
   --   event = "BufRead",
   --   build = "./install.sh",

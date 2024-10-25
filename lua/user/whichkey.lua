@@ -18,6 +18,7 @@ mappings["h"] = {
   s = { "<cmd>CopilotChatSend<cr>", "Send Message" },
   r = { "<cmd>CopilotChatReply<cr>", "Reply to Message" },
   h = { "<cmd>CopilotChatHistory<cr>", "Chat History" },
+  l = { _G.pass_to_copilot_chat, "Pass to Copilot Chat" },
   d = {
     name = "advance",
     c = { "<cmd>CopilotChat<cr>", "Open Chat Window" },

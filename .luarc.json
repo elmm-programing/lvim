@@ -1,0 +1,13 @@
+{
+    "diagnostics.globals": [
+        "vim",
+        "lvim",
+        "reload",
+        "pass_to_copilot_chat",
+        "get_files_and_content",
+        "node_version"
+    ],
+    "diagnostics.disable": [
+        "need-check-nil"
+    ]
+}

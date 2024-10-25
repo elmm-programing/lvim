@@ -1,9 +1,9 @@
 lvim.builtin.alpha.dashboard.section.header.val = {
-  "    __                          _    ___         ",
-  "   / /   __  ______  ____ _____| |  / (_)___ ___ ",
-  "  / /   / / / / __ \\/ __ `/ ___/ | / / / __ `__ \\",
-  " / /___/ /_/ / / / / /_/ / /   | |/ / / / / / / /",
-  "/_____/\\__,_/_/ /_/\\__,_/_/    |___/_/_/ /_/ /_/ ",
+	"    __                          _    ___         ",
+	"   / /   __  ______  ____ _____| |  / (_)___ ___ ",
+	"  / /   / / / / __ \\/ __ `/ ___/ | / / / __ `__ \\",
+	" / /___/ /_/ / / / / /_/ / /   | |/ / / / / / / /",
+	"/_____/\\__,_/_/ /_/\\__,_/_/    |___/_/_/ /_/ /_/ ",
 }
 
 -- lvim.colorscheme = "onedark"
@@ -19,9 +19,8 @@ lvim.builtin.nvimtree.setup.view.side = "left"
 lvim.builtin.nvimtree.setup.renderer.icons.show.git = false
 lvim.builtin.breadcrumbs.active = true
 lvim.builtin.dap.active = true
-lvim.builtin.nvimtree.setup.actions.open_file.quit_on_open=true
+lvim.builtin.nvimtree.setup.actions.open_file.quit_on_open = true
 lvim.keys.term_mode = { ["<C-l>"] = false }
-
 
 -- lvim.builtin.cmp.formatting = {
 --     format = require("tailwindcss-colorizer-cmp").formatter
@@ -32,47 +31,47 @@ lvim.keys.term_mode = { ["<C-l>"] = false }
 vim.opt.showtabline = 0
 
 local options = {
-  backup = false, -- creates a backup file
-  clipboard = "unnamedplus", -- allows neovim to access the system clipboard
-  cmdheight = 1, -- more space in the neovim command line for displaying messages
-  completeopt = { "menuone", "noselect" }, -- mostly just for cmp
-  conceallevel = 0, -- so that `` is visible in markdown files
-  fileencoding = "utf-8", -- the encoding written to a file
-  hlsearch = true, -- highlight all matches on previous search pattern
-  ignorecase = true, -- ignore case in search patterns
-  mouse = "a", -- allow the mouse to be used in neovim
-  pumheight = 10, -- pop up menu height
-  showmode = false, -- we don't need to see things like -- INSERT -- anymore
-  showtabline = 0, -- always show tabs
-  smartcase = true, -- smart case
-  smartindent = true, -- make indenting smarter again
-  splitbelow = true, -- force all horizontal splits to go below current window
-  splitright = true, -- force all vertical splits to go to the right of current window
-  swapfile = false, -- creates a swapfile
-  termguicolors = true, -- set term gui colors (most terminals support this)
-  timeoutlen = 1000, -- time to wait for a mapped sequence to complete (in milliseconds)
-  undofile = true, -- enable persistent undo
-  updatetime = 100, -- faster completion (4000ms default)
-  writebackup = false, -- if a file is being edited by another program (or was written to file while editing with another program), it is not allowed to be edited
-  expandtab = true, -- convert tabs to spaces
-  shiftwidth = 2, -- the number of spaces inserted for each indentation
-  tabstop = 2, -- insert 2 spaces for a tab
-  cursorline = true, -- highlight the current line
-  number = true, -- set numbered lines
-  laststatus = 3,
-  showcmd = false,
-  ruler = false,
-  relativenumber = true, -- set relative numbered lines
-  numberwidth = 4, -- set number column width to 2 {default 4}
-  signcolumn = "yes", -- always show the sign column, otherwise it would shift the text each time
-  wrap = false, -- display lines as one long line
-  scrolloff = 0,
-  sidescrolloff = 8,
-  guifont = "monospace:h17", -- the font used in graphical neovim applications
-  title = true,
-  titleold = vim.split(os.getenv("SHELL") or "", "/")[3] ,
-  -- colorcolumn = "80",
-  -- colorcolumn = "120",
+	backup = false, -- creates a backup file
+	clipboard = "unnamedplus", -- allows neovim to access the system clipboard
+	cmdheight = 1, -- more space in the neovim command line for displaying messages
+	completeopt = { "menuone", "noselect" }, -- mostly just for cmp
+	conceallevel = 0, -- so that `` is visible in markdown files
+	fileencoding = "utf-8", -- the encoding written to a file
+	hlsearch = true, -- highlight all matches on previous search pattern
+	ignorecase = true, -- ignore case in search patterns
+	mouse = "a", -- allow the mouse to be used in neovim
+	pumheight = 10, -- pop up menu height
+	showmode = false, -- we don't need to see things like -- INSERT -- anymore
+	showtabline = 0, -- always show tabs
+	smartcase = true, -- smart case
+	smartindent = true, -- make indenting smarter again
+	splitbelow = true, -- force all horizontal splits to go below current window
+	splitright = true, -- force all vertical splits to go to the right of current window
+	swapfile = false, -- creates a swapfile
+	termguicolors = true, -- set term gui colors (most terminals support this)
+	timeoutlen = 1000, -- time to wait for a mapped sequence to complete (in milliseconds)
+	undofile = true, -- enable persistent undo
+	updatetime = 100, -- faster completion (4000ms default)
+	writebackup = false, -- if a file is being edited by another program (or was written to file while editing with another program), it is not allowed to be edited
+	expandtab = true, -- convert tabs to spaces
+	shiftwidth = 2, -- the number of spaces inserted for each indentation
+	tabstop = 2, -- insert 2 spaces for a tab
+	cursorline = true, -- highlight the current line
+	number = true, -- set numbered lines
+	laststatus = 3,
+	showcmd = false,
+	ruler = false,
+	relativenumber = true, -- set relative numbered lines
+	numberwidth = 4, -- set number column width to 2 {default 4}
+	signcolumn = "yes", -- always show the sign column, otherwise it would shift the text each time
+	wrap = false, -- display lines as one long line
+	scrolloff = 0,
+	sidescrolloff = 8,
+	guifont = "monospace:h17", -- the font used in graphical neovim applications
+	title = true,
+	titleold = vim.split(os.getenv("SHELL") or "", "/")[3],
+	-- colorcolumn = "80",
+	-- colorcolumn = "120",
 }
 -- vim.g.loaded_netrw = 1
 -- vim.g.loaded_netrwPlugin = 1
@@ -81,46 +80,24 @@ local options = {
 -- vim.opt.fillchars = vim.opt.fillchars + "vertright: "
 vim.opt.fillchars = vim.opt.fillchars + "eob: "
 
-
-
 for k, v in pairs(options) do
-  vim.opt[k] = v
+	vim.opt[k] = v
 end
 
-vim.cmd "set whichwrap+=<,>,[,],h,l"
-vim.cmd [[set iskeyword+=-]]
-vim.cmd [[set formatoptions-=cro]] -- TODO: this doesn't seem to work
+vim.cmd("set whichwrap+=<,>,[,],h,l")
+vim.cmd([[set iskeyword+=-]])
+vim.cmd([[set formatoptions-=cro]]) -- TODO: this doesn't seem to work
 
-vim.filetype.add {
-  extension = {
-    conf = "dosini",
-  },
-}
+vim.filetype.add({
+	extension = {
+		conf = "dosini",
+	},
+})
 
-local lspconfig = require('lspconfig')
+local lspconfig = require("lspconfig")
 
 -- local handle = io.popen("node -v")
 -- local node_version = handle:read("*a")
 -- handle:close()
-
--- node_version = string.gsub(node_version, "\n", "") -- Remove newline character
--- local vue_language_server_path = "/home/elmm/.nvm/versions/node/" .. node_version .. "/lib/node_modules/@vue/language-server"
--- print("Updated vue_language_server_path: " .. vue_language_server_path)
-
--- lspconfig.tsserver.setup {
---   init_options = {
---     plugins = {
---       {
---         name = '@vue/typescript-plugin',
---         location = vue_language_server_path,
---         languages = { 'vue' },
---       },
---     },
---   },
---   filetypes = { 'typescript', 'javascript', 'javascriptreact', 'typescriptreact', 'vue' },
--- }
-
--- -- No need to set `hybridMode` to `true` as it's the default value
--- lspconfig.volar.setup {}
 
 

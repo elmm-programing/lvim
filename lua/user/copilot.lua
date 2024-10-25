@@ -1,11 +1,7 @@
 require("copilot").setup({
-  suggestion = { enabled = false },
-  panel = { enabled = false },
+  suggestion = { enabled = true },
+  panel = { enabled = true},
 })
--- local ok, copilot = pcall(require, "copilot")
--- if not ok then
---   return
--- end
 
 
 -- local opts = { noremap = true, silent = true }

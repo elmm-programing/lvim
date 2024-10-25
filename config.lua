@@ -1,34 +1,40 @@
-reload "user.plugins"
-reload "user.options"
-reload "user.keymaps"
-reload "user.lsp"
-reload "user.smoothie"
-reload "user.harpoon"
-reload "user.autocommands"
-reload "user.webdev-icons"
-reload "user.cybu"
-reload "user.neotest"
-reload "user.surround"
-reload "user.bookmark"
-reload "user.todo-comments"
-reload "user.jaq"
-reload "user.fidget"
-reload "user.lab"
-reload "user.git"
-reload "user.zen-mode"
-reload "user.inlay-hints"
-reload "user.telescope"
-reload "user.bqf"
-reload "user.dial"
-reload "user.numb"
-reload "user.neogit"
-reload "user.colorizer"
-reload "user.whichkey"
-reload "user.neoai"
-reload "user.cmp"
-reload "user.matchup"
-reload "user.copilot"
-reload "user.lsp.languages.terraform"
-reload "user.lsp.formatters.eslint"
-reload "user.lsp.formatters.prettier"
-reload "user.lsp.formatters.tailwindcss"
+reload("user.plugins")
+reload("user.options")
+reload("user.keymaps")
+reload("user.lsp")
+reload("user.smoothie")
+reload("user.harpoon")
+reload("user.autocommands")
+reload("user.webdev-icons")
+reload("user.cybu")
+reload("user.neotest")
+reload("user.surround")
+reload("user.bookmark")
+reload("user.todo-comments")
+reload("user.jaq")
+reload("user.fidget")
+reload("user.lab")
+reload("user.git")
+reload("user.zen-mode")
+reload("user.inlay-hints")
+reload("user.telescope")
+reload("user.bqf")
+reload("user.dial")
+reload("user.numb")
+reload("user.neogit")
+reload("user.colorizer")
+reload("user.whichkey")
+reload("user.neoai")
+reload("user.cmp")
+reload("user.matchup")
+reload("user.copilot")
+reload("user.dap")
+reload("user.lsp.languages.terraform")
+reload("user.lsp.formatters.eslint")
+reload("user.lsp.formatters.prettier")
+reload("user.lsp.formatters.tailwindcss")
+
+lvim.builtin.mason.ensure_installed = {
+  "vue-language-server@1.35.0" -- Specify the version using the correct syntax
+}
+

@@ -9,27 +9,31 @@ keymap("i", "kj", "<Esc>", opts)
 keymap("n", "<C-Space>", "<cmd>WhichKey \\<space><cr>", opts)
 keymap("n", "<C-i>", "<C-i>", opts)
 
--- Normal --
--- Better window navigation
-keymap("n", "<m-h>", "<C-w>h", opts)
-keymap("n", "<m-j>", "<C-w>j", opts)
-keymap("n", "<m-k>", "<C-w>k", opts)
-keymap("n", "<m-l>", "<C-w>l", opts)
-keymap("n", "<m-tab>", "<c-6>", opts)
 
+-- Normal --
+-- Better window navigation using Option key
+keymap("n", "<D-h>", "<C-w>h", opts)
+keymap("n", "<D-j>", "<C-w>j", opts)
+keymap("n", "<D-k>", "<C-w>k", opts)
+keymap("n", "<D-l>", "<C-w>l", opts)
+
+-- Terminal mode window navigation using Option key
+function _G.set_terminal_keymaps()
+  local term_opts = { noremap = true, silent = true }
+  vim.api.nvim_buf_set_keymap(0, "t", "<D-h>", [[<C-\><C-n><C-W>h]], term_opts)
+  vim.api.nvim_buf_set_keymap(0, "t", "<D-j>", [[<C-\><C-n><C-W>j]], term_opts)
+  vim.api.nvim_buf_set_keymap(0, "t", "<D-k>", [[<C-\><C-n><C-W>k]], term_opts)
+  vim.api.nvim_buf_set_keymap(0, "t", "<D-l>", [[<C-\><C-n><C-W>l]], term_opts)
+end
+
+vim.cmd "autocmd! TermOpen term://* lua set_terminal_keymaps()"
 keymap("n", "<Down>", "<cmd>BookmarkNext<cr>", opts)
 keymap("n", "<Up>", "<cmd>BookmarkPrev<cr>", opts)
 keymap("n", "<Right>", "<cmd>FilemarkNext<cr>", opts)
 keymap("n", "<Left>", "<cmd>FilemarkPrev<cr>", opts)
 
-function _G.set_terminal_keymaps()
-  vim.api.nvim_buf_set_keymap(0, "t", "<m-h>", [[<C-\><C-n><C-W>h]], opts)
-  vim.api.nvim_buf_set_keymap(0, "t", "<m-j>", [[<C-\><C-n><C-W>j]], opts)
-  vim.api.nvim_buf_set_keymap(0, "t", "<m-k>", [[<C-\><C-n><C-W>k]], opts)
-  vim.api.nvim_buf_set_keymap(0, "t", "<m-l>", [[<C-\><C-n><C-W>l]], opts)
-end
 
-vim.cmd "autocmd! TermOpen term://* lua set_terminal_keymaps()"
+
 
 -- Tabs --
 -- keymap("n", "\\", ":tabnew %<cr>", opts)

@@ -2,6 +2,30 @@
 lvim.plugins = {
 	"catppuccin/nvim",
 	{ "mfussenegger/nvim-dap" },
+  { 
+  'mrjones2014/smart-splits.nvim',
+  init = function()
+    -- recommended mappings
+    -- resizing splits
+    -- these keymaps will also accept a range,
+    -- for example `10<A-h>` will `resize_left` by `(10 * config.default_amount)`
+    -- vim.keymap.set('n', '<C-h>', require('smart-splits').resize_left)
+    -- vim.keymap.set('n', '<C-j>', require('smart-splits').resize_down)
+    -- vim.keymap.set('n', '<C-k>', require('smart-splits').resize_up)
+    -- vim.keymap.set('n', '<C-l>', require('smart-splits').resize_right)
+    -- moving between splits
+    vim.keymap.set('n', '<leader>h', require('smart-splits').move_cursor_left)
+    vim.keymap.set('n', '<leader>j', require('smart-splits').move_cursor_down)
+    vim.keymap.set('n', '<leader>k', require('smart-splits').move_cursor_up)
+    vim.keymap.set('n', '<leader>l', require('smart-splits').move_cursor_right)
+    vim.keymap.set('n', '<C-\\>', require('smart-splits').move_cursor_previous)
+    -- swapping buffers between windows
+    -- vim.keymap.set('n', '<leader><leader>h', require('smart-splits').swap_buf_left)
+    -- vim.keymap.set('n', '<leader><leader>j', require('smart-splits').swap_buf_down)
+    -- vim.keymap.set('n', '<leader><leader>k', require('smart-splits').swap_buf_up)
+    -- vim.keymap.set('n', '<leader><leader>l', require('smart-splits').swap_buf_right)
+  end
+},
 	{
 		"microsoft/vscode-js-debug",
 		-- After install, build it and rename the dist directory to out
@@ -44,34 +68,30 @@ debugger_cmd = { "node", "/home/elmm/.local/share/lunarvim/site/pack/lazy/opt/vs
 	},
 	
 	"hashivim/vim-terraform",
-	{
-		"CopilotC-Nvim/CopilotChat.nvim",
-		branch = "canary",
-		dependencies = {
-			{ "zbirenbaum/copilot.lua" }, -- or github/copilot.vim
-			{ "nvim-lua/plenary.nvim" }, -- for curl, log wrapper
-		},
-		opts = {
-			debug = true, -- Enable debugging
-			-- See Configuration section for rest
-		},
-		-- See Commands section for default commands if you want to lazy load on them
-	},
+	-- {
+	-- 	"CopilotC-Nvim/CopilotChat.nvim",
+	-- 	branch = "canary",
+	-- 	dependencies = {
+	-- 		{ "zbirenbaum/copilot.lua" }, -- or github/copilot.vim
+	-- 		{ "nvim-lua/plenary.nvim" }, -- for curl, log wrapper
+	-- 	},
+	-- 	opts = {
+	-- 		debug = true, -- Enable debugging
+	-- 		-- See Configuration section for rest
+	-- 	},
+	-- 	-- See Commands section for default commands if you want to lazy load on them
+	-- },
 	{
 		"mawkler/modicator.nvim",
 		event = "ColorScheme",
 	},
-	{
-		"zbirenbaum/copilot.lua",
-		cmd = "Copilot",
-		event = "InsertEnter",
-	},
-	{
-		"zbirenbaum/copilot-cmp",
-		config = function()
-			require("copilot_cmp").setup()
-		end,
-	},
+	
+	-- {
+	-- 	"zbirenbaum/copilot-cmp",
+	-- 	config = function()
+	-- 		require("copilot_cmp").setup()
+	-- 	end,
+	-- },
 	"HiPhish/nvim-ts-rainbow2",
 	-- {
 	--   dir = "/Users/chris/Repos/bookmark.nvim",
@@ -156,12 +176,12 @@ debugger_cmd = { "node", "/home/elmm/.local/share/lunarvim/site/pack/lazy/opt/vs
 		"0x100101/lab.nvim",
 		build = "cd js && npm ci",
 	},
-	"github/copilot.vim",
-	{
-		"zbirenbaum/copilot.lua",
-		cmd = "Copilot",
-		event = "InsertEnter",
-	},
+	-- "github/copilot.vim",
+	-- {
+	-- 	"zbirenbaum/copilot.lua",
+	-- 	cmd = "Copilot",
+	-- 	event = "InsertEnter",
+	-- },
 	-- {
 	--   "tzachar/cmp-tabnine",
 	--   event = "BufRead",

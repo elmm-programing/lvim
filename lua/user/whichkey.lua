@@ -10,51 +10,6 @@ mappings["o"] = { "<cmd>AerialToggle!<cr>", "Outline" }
 mappings["q"] = { '<cmd>lua require("user.functions").smart_quit()<CR>', "Quit" }
 mappings["/"] = { '<cmd>lua require("Comment.api").toggle.linewise.current()<CR>', "Comment" }
 mappings["gy"] = "Link"
-mappings["h"] = {
-  name = "Copilot Chat",
-  o = { "<cmd>CopilotChatOpen<cr>", "Open Chat" },
-  c = { "<cmd>CopilotChatClose<cr>", "Close Chat" },
-  t = { "<cmd>CopilotChatToggle<cr>", "Toggle Chat" },
-  s = { "<cmd>CopilotChatSend<cr>", "Send Message" },
-  r = { "<cmd>CopilotChatReply<cr>", "Reply to Message" },
-  h = { "<cmd>CopilotChatHistory<cr>", "Chat History" },
-  l = { _G.pass_to_copilot_chat, "Pass to Copilot Chat" },
-  d = {
-    name = "advance",
-    c = { "<cmd>CopilotChat<cr>", "Open Chat Window" },
-    o = { "<cmd>CopilotChatOpen<cr>", "Open Chat Window" },
-    x = { "<cmd>CopilotChatClose<cr>", "Close Chat Window" },
-    t = { "<cmd>CopilotChatToggle<cr>", "Toggle Chat Window" },
-    s = { "<cmd>CopilotChatStop<cr>", "Stop Copilot Output" },
-    r = { "<cmd>CopilotChatReset<cr>", "Reset Chat Window" },
-    S = { "<cmd>CopilotChatSave<cr>", "Save Chat History" },
-    l = { "<cmd>CopilotChatLoad<cr>", "Load Chat History" },
-    d = { "<cmd>CopilotChatDebugInfo<cr>", "Show Debug Info" },
-    m = { "<cmd>CopilotChatModels<cr>", "View and Select Models" },
-    e = { "<cmd>CopilotChatExplain<cr>", "Explain Code" },
-    v = { "<cmd>CopilotChatReview<cr>", "Review Code" },
-    f = { "<cmd>CopilotChatFix<cr>", "Fix Code" },
-    O = { "<cmd>CopilotChatOptimize<cr>", "Optimize Code" },
-    D = { "<cmd>CopilotChatDocs<cr>", "Add Documentation" },
-    T = { "<cmd>CopilotChatTests<cr>", "Generate Tests" },
-    F = { "<cmd>CopilotChatFixDiagnostic<cr>", "Fix Diagnostic Issue" },
-    C = { "<cmd>CopilotChatCommit<cr>", "Write Commit Message" },
-    p = { "<cmd>CopilotChatCommitStaged<cr>", "Write Commit Message for Staged Changes" },
-
-  }
-
-}
-mappings["c"] = {
-  name = "Copilot",
-  e = { "<cmd>Copilot enable<cr>", "Enable Copilot" },
-  d = { "<cmd>Copilot disable<cr>", "Disable Copilot" },
-  s = { "<cmd>Copilot status<cr>", "Copilot Status" },
-  p = { "<cmd>Copilot panel<cr>", "Open Copilot Panel" },
-  n = { "<cmd>Copilot next<cr>", "Next Suggestion" },
-  m = { "<cmd>Copilot prev<cr>", "Previous Suggestion" },
-  a = { "<cmd>Copilot accept<cr>", "Accept Suggestion" },
-}
-
 
 mappings["r"] = {
   name = "Replace",
